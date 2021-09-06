@@ -1,0 +1,36 @@
+.box{
+  margin: 5px;
+  width: 90%;
+  height: fit-content;
+  background-color: rgba(128, 128, 128, 0.5);
+  border: 10px;
+  border-radius: 10px;
+}
+h2{
+  margin-bottom: 5px;
+}
+.time{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date{
+  margin-top: 25px;
+  padding-right: 0.5rem;
+}
+
+.layout{
+  padding-left: 0.5rem;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+.message{
+  text-align: start;
+  font-size: 22px;
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
