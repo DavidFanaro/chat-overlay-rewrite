@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from 'dompurify';
 import "./ChatCard.css";
 
 type props = {
@@ -8,6 +9,7 @@ type props = {
 };
 
 function ChatCard({ name, mes, color }: props) {
+  const safemes=DOMPurify.sanitize(mes)
   return (
     <div className="box">
       <div className="layout">
@@ -24,7 +26,7 @@ function ChatCard({ name, mes, color }: props) {
           })}
         </div>
         </div>
-        <div className="message">{mes}</div>
+        <div dangerouslySetInnerHTML={{__html: safemes}} className="message"></div>
       </div>
     </div>
   );
