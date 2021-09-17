@@ -54,10 +54,19 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() =>{
+    if (mes.length >= 20){
+      const newChat = mes
+      newChat.pop()
+      console.log("popped")
+      setmes(newChat)
+    }
+  },[mes])
+
   return (
     <div className="container">
-      {mes.map((v, i) => {
-        return <ChatCard name={v.name!} mes={v.message} color={v.nameColor} />;
+      {mes.reverse().map((v, i) => {
+        return <ChatCard name={v.name!} mes={v.message} color={v.nameColor} key={i} />;
       })}
     </div>
   );
